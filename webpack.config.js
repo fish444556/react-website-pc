@@ -5,11 +5,11 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   entry: {
-    pages: __dirname + '/src/main.js'
+    pages: __dirname + '/src/index.js'
   },
   output: {
     publicPath: '/dist/',
-    filename: 'js/bundle.js'
+    filename: 'bundle.js'
   },
   devtool: 'source-map',
   module: {
