@@ -26,6 +26,7 @@ const RootRoute = () => {
         <Route path='book' component={BookContainer} />
         {/*<Route path='movie/:id' component={MovieDetailContainer} />*/}
       </Route>
+      <Redirect from='/*' to='/home' />
     </Router>
   )
 }
