@@ -4,11 +4,12 @@ var path = require('path')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
-  entry: {
-    pages: __dirname + '/src/index.js'
-  },
+  entry: [
+    path.resolve(__dirname, 'src/index.js')
+  ],
   output: {
-    publicPath: '/dist/',
+    path: path.resolve(__dirname, 'src'),
+    publicPath: '/',
     filename: 'bundle.js'
   },
   devtool: 'source-map',
@@ -30,17 +31,21 @@ module.exports = {
       },
       {
         test: /\.less$/,
-            use: [{
-                loader: "style-loader"
-            }, {
-                loader: "css-loader"
-            }, {
-                loader: "less-loader", options: {
-                    paths: [
-                        path.resolve(__dirname, "node_modules")
-                    ]
-                }
-            }]
+        use: [{
+          loader: "style-loader"
+        }, {
+          loader: "css-loader"
+        }, {
+          loader: "less-loader", options: {
+            paths: [
+              path.resolve(__dirname, "node_modules")
+            ]
+          }
+        }]
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader?limited=8192'
       }
     ]
   },
