@@ -17,6 +17,7 @@ const MovieContainer = () => {
           title='In theaters'
           type='in_theaters'
           total={30}
+          hasMore={true}
         />
       </Content>
     </Layout>

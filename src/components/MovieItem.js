@@ -12,13 +12,18 @@ class MovieItem extends React.Component {
         <div>
           <div className='movie_img'>
             <Link to={`movie/` + id}>
-              { title }
+              <img src={imgUrl} />
             </Link>
           </div>
-          {
-            rating === '0' ? <div className='movie_genre'>{genre}</div>
-            : <div className='movie_score'>{rating}</div>
-          }
+          <div className='movie_info'>
+            <div className='movie_title'>
+              <Link to={'movie/' + id}>{title}</Link>
+            </div>
+            {
+              rating === '0' ? <div className='movie_genre'>{genre}</div>
+              : <div className='movie_score'>{rating}</div>
+            }
+          </div>
         </div>
       </Col>
     )

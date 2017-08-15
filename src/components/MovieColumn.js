@@ -6,8 +6,6 @@ import ColumnHeader from './ColumnHeader'
 import Loading from './Loading'
 import MovieList from './MovieList'
 
-import '../style/Column.less'
-
 class MovieColumn extends React.Component {
   state = {
     isLoading: true,
@@ -35,7 +33,6 @@ class MovieColumn extends React.Component {
   }
 
   resolve = (data) => {
-    debugger
     if (data && !this.unmount) {
       this.setState({
         MoviesData: data.subjects,

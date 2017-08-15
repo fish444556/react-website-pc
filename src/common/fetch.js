@@ -6,7 +6,6 @@ export function fetch_movie(params) {
   if (!params) {
     return false
   }
-  debugger
   let REQUEST_PATH = config.SERVER_PATH + `/movie/${params.type}`
   if (params.type !== 'us_box') {
     REQUEST_PATH += `?start=${params.start}&count=${params.count}`

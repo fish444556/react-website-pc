@@ -1,11 +1,11 @@
 import React from 'react'
 import { Icon } from 'antd'
 
-import '../style/Column.less'
+// import '../style/Column.less'
 
 const ColumnHeader = ({title, hasMore}) => {
   return (
-    <div className="Column_header">
+    <div className="column_header">
       <span className="column_title">
         {title}
       </span>

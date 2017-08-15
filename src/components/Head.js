@@ -16,10 +16,10 @@ const Head = () => {
           <Col span={6}><a href='/' className='logo' /></Col>
           <Col span={16} offset={2}>
             <ul className='header_tab'>
-              <li><IndexLink to='/' activeClassName='header_curPage'>home</IndexLink></li>
-              <li><IndexLink to='/movie' activeClassName='header_curPage'>movie</IndexLink></li>
-              <li><IndexLink to='/book' activeClassName='header_curPage'>book</IndexLink></li>
-              <li><IndexLink to='/music' activeClassName='header_curPage'>music</IndexLink></li>
+              <li><IndexLink to='/' activeClassName='header_curPage'>Home</IndexLink></li>
+              <li><IndexLink to='/movie' activeClassName='header_curPage'>Movie</IndexLink></li>
+              <li><IndexLink to='/book' activeClassName='header_curPage'>Book</IndexLink></li>
+              <li><IndexLink to='/music' activeClassName='header_curPage'>Music</IndexLink></li>
             </ul>
           </Col>
         </Row>
