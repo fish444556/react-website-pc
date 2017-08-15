@@ -4,6 +4,7 @@ import { comments, comments_More } from '../../common/mock'
 
 import Loading from '../Loading'
 import ListLoadMore from '../ListLoadMore'
+import MovieActors from './MovieActors'
 
 class MvoieIntro extends React.Component {
   state = {
@@ -44,6 +45,11 @@ class MvoieIntro extends React.Component {
             : this.props.data.summary
           }
         </Card>
+        <MovieActors
+          directors={this.props.isLoading ? null : this.props.data.directors}
+          casts={this.props.isLoading ? null : this.props.data.casts}
+          isLoading={this.props.isLoading}
+        />
 
         <Card title='Reviews'>
           { commentList }
