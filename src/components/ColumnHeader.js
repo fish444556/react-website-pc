@@ -3,9 +3,9 @@ import { Icon } from 'antd'
 
 // import '../style/Column.less'
 
-const ColumnHeader = ({title, hasMore}) => {
+const ColumnHeader = ({title, hasMore, id}) => {
   return (
-    <div className="column_header">
+    <div className="column_header" id={id}>
       <span className="column_title">
         {title}
       </span>

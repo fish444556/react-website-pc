@@ -14,6 +14,6 @@ import './style/MovieDetail.less'
 import './style/ListLoadMore.less'
 
 ReactDOM.render(
-  <RootRouter />,
+    <RootRouter />,
   document.getElementById('app')
 )
