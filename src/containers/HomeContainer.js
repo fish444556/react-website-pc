@@ -1,6 +1,6 @@
 import React from 'react'
 import { Layout, Pagination } from 'antd'
-import fetch from '../common/fetch'
+import { fetch_movie } from '../common/fetch'
 
 import 'antd/dist/antd.less'
 
@@ -18,7 +18,7 @@ class HomeContainer extends React.Component {
     this.onChangePage = this.onChangePage.bind(this)
   }
   handle(params = {'start': 1, 'count': 5}) {
-    fetch(params)
+    fetch_movie(params)
   }
 
   onChangePage(page) {
