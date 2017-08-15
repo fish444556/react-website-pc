@@ -5,12 +5,30 @@ body {
 .container {
   width: 1200px;
   margin: 0 auto;
+}
+
+.ant-layout-header {
+  background: @bgColor;
   border-bottom: 1px solid @bdColor;
 }
 
-.ant-layout,.ant-layout-header,.ant-layout-footer {
+.ant-layout,.ant-layout-sider {
   background: @bgColor;
 }
+
+.center {
+  padding-top: 10px;
+
+  .ant-layout-content {
+    padding-left: 10px;
+    border: 1px solid @bdColor;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+
+}
+
+
 
 @current: #f2bd00;
 

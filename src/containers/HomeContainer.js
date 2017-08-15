@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout } from 'antd'
+import { Layout, Pagination } from 'antd'
 import fetch from '../common/fetch'
 
 import 'antd/dist/antd.less'
@@ -11,11 +11,24 @@ const { Content, Sider } = Layout
 class HomeContainer extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      'currentPage': 1
+    }
     this.handle = this.handle.bind(this)
+    this.onChangePage = this.onChangePage.bind(this)
   }
-  handle() {
-    console.log("click")
-    console.log(fetch())
+  handle(params = {'start': 1, 'count': 5}) {
+    fetch(params)
+  }
+
+  onChangePage(page) {
+    this.setState({
+      'currentPage': page
+    })
+    this.handle({
+      'start': page,
+      'count': 5
+    })
   }
   render() {
     return (
@@ -25,6 +38,11 @@ class HomeContainer extends React.Component {
         </Sider>
         <Content>
           <button onClick={this.handle}> Test fetch </button>
+        <Pagination
+          current={this.state.currentPage}
+          onChange={this.onChangePage}
+          total={20}
+        />
         </Content>
       </Layout>
     )

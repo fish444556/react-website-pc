@@ -9,7 +9,7 @@ class AppContainer extends React.Component {
       <div>
         <Head />
 
-        <div className="container">
+        <div className="container center">
           {this.props.children}
         </div>
 

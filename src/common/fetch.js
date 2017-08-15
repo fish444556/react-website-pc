@@ -1,8 +1,10 @@
 import fetchJsonp from 'fetch-jsonp'
 
-function fetch() {
-  fetchJsonp('https://api.douban.com/v2/book/1220562')
-  .then(function (response) {
+function fetch(params) {
+  const result = fetchJsonp(`https://api.douban.com/v2/movie/in_theaters?start=${params.start}&count=${params.count}`, {
+    timeout: 3400
+  })
+  result.then(function (response) {
     console.log(response.json())
     return response.json()
   })
