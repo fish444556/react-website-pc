@@ -20,3 +20,23 @@ export const comments_More = Mock.mock({
     'url': Random.image('50x50', Random.color(), Random.color(), Random.word(3, 5))
   }]
 })
+
+
+export const messages = Mock.mock({
+  'messageList|5-8': [{
+    'id': '@natural',
+    'name': '@name',
+    'title': '@title(3,6)',
+    'url': Random.image('40x40', Random.color(), Random.color(), Random.word(3, 5))
+  }]
+})
+
+
+export const correlations = Mock.mock({
+  'correlationList|5-8': [{
+    'id': '@natural',
+    'name': '@name',
+    'title': '@title(3,6)',
+    'url': Random.image('40x40', Random.color(), Random.color(), Random.word(3, 5))
+  }]
+})
