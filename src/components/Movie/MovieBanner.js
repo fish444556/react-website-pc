@@ -29,7 +29,7 @@ const MovieBanner = ({isLoading, data}) => {
 
   return (
     <div className='movie_banner'>
-      <div className='movie_intro'>
+      <div className='movie_introduce'>
         <div className='movie_poster'>
           <img src={data.images.large} />
         </div>

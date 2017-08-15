@@ -10,6 +10,7 @@ import './style/Common.less'
 import './style/MovieColumn.less'
 import './style/MovieItem.less'
 import './style/MovieMenu.less'
+import './style/MovieDetail.less'
 
 ReactDOM.render(
   <RootRouter />,

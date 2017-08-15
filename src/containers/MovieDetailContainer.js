@@ -3,6 +3,7 @@ import { Layout, Rate, Card, Icon, Row, BackTop } from 'antd'
 import { fetch_movieDetail } from '../common/fetch'
 
 import MovieBanner from '../components/Movie/MovieBanner'
+import MvoieIntro from '../components/Movie/MvoieIntro'
 
 class MovieDetailContainer extends React.Component {
   state = {
@@ -43,6 +44,17 @@ class MovieDetailContainer extends React.Component {
           isLoading={this.state.isLoading}
           data={this.state.data}
         />
+        <Row>
+          <MvoieIntro
+            isLoading={this.state.isLoading}
+            data={this.state.data}
+          />
+        </Row>
+        <BackTop>
+          <div className='ant-back-top-inner'>
+            <Icon type='arrow-up' />
+          </div>
+        </BackTop>
       </div>
     )
   }
