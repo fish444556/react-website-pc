@@ -4,7 +4,7 @@ import { fetch_movie } from '../common/fetch'
 
 import 'antd/dist/antd.less'
 
-import MovieMenu from '../components/MovieMenu'
+import MovieMenu from '../components/Movie/MovieMenu'
 
 const { Content, Sider } = Layout
 

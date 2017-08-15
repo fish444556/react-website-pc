@@ -1,7 +1,7 @@
 import React from 'react'
 import { Layout } from 'antd'
-import MovieMenu from '../components/MovieMenu'
-import MovieColumn from '../components/MovieColumn'
+import MovieMenu from '../components/Movie/MovieMenu'
+import MovieColumn from '../components/Movie/MovieColumn'
 
 const { Content, Sider } = Layout
 

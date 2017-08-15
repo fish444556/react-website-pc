@@ -1,9 +1,9 @@
 import React from 'react'
 import { Icon } from 'antd'
-import { fetch_movie } from '../common/fetch'
-import { DEFAULT_START, DEFAULT_COUNT } from '../common/config'
-import ColumnHeader from './ColumnHeader'
-import Loading from './Loading'
+import { fetch_movie } from '../../common/fetch'
+import { DEFAULT_START, DEFAULT_COUNT } from '../../common/config'
+import ColumnHeader from '../ColumnHeader'
+import Loading from '../Loading'
 import MovieList from './MovieList'
 
 class MovieColumn extends React.Component {

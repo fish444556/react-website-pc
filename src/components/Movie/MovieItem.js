@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col } from 'antd'
 import { Link } from 'react-router'
-import * as config from '../common/config'
+import * as config from '../../common/config'
 
 
 class MovieItem extends React.Component {
