@@ -1,18 +1,27 @@
 import React from 'react'
 import { Icon } from 'antd'
+import { Link } from 'react-router'
+import { DEFAULT_COUNT } from '../common/config'
+import Pages from './Pages'
 
-// import '../style/Column.less'
 
-const ColumnHeader = ({title, hasMore, id}) => {
+const ColumnHeader = ({title, id, total, target, onChange, currentPage}) => {
   return (
     <div className="column_header" id={id}>
       <span className="column_title">
-        {title}
+        <Link to={target}>
+          {title}
+        </Link>
       </span>
-      {hasMore && <span className='column_more'>
-        More
-        <Icon type='right' />
-      </span>}
+      {total > DEFAULT_COUNT ?
+        <Pages
+          currentPage={currentPage}
+          onChange={onChange}
+          total={total}
+          id={id}
+        />
+        : ''
+      }
     </div>
   )
 }

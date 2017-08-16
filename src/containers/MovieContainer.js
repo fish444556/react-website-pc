@@ -19,22 +19,19 @@ class MovieContainer extends React.Component {
             id='inTheaters'
             title='In theaters'
             type='in_theaters'
-            total={30}
-            hasMore={true}
+            total={40}
           />
         <MovieColumn
           id='usBox'
           title='US box'
           type='us_box'
           total={30}
-          // hasMore={true}
         />
         <MovieColumn
           id='top250'
           title='Top 250'
           type='top250'
-          total={30}
-          // hasMore={true}
+          total={40}
         />
       </Content>
     </Layout>

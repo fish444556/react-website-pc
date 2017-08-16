@@ -12,6 +12,7 @@ import './style/MovieItem.less'
 import './style/MovieMenu.less'
 import './style/MovieDetail.less'
 import './style/ListLoadMore.less'
+import './style/Pages.less'
 
 ReactDOM.render(
     <RootRouter />,

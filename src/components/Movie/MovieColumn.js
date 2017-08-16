@@ -10,7 +10,8 @@ class MovieColumn extends React.Component {
   state = {
     isLoading: true,
     MoviesData: null,
-    currentPage: 1
+    currentPage: 1,
+    total: 0
   }
 
   componentDidMount () {
@@ -36,7 +37,8 @@ class MovieColumn extends React.Component {
     if (data && !this.unmount) {
       this.setState({
         MoviesData: data.subjects,
-        isLoading: false
+        isLoading: false,
+        total: data.subjects.length
       })
     }
   }
@@ -57,14 +59,13 @@ class MovieColumn extends React.Component {
   }
 
   render() {
-    const { type, hasMore, total, title, id } = this.props
+    const { type, title, id, total } = this.props
     const { MoviesData, isLoading, currentPage } = this.state
     return (
       <div>
         <ColumnHeader
           title={title}
           id={id}
-          hasMore={hasMore}
           total={total}
           target='/movie'
           onChange={this.pageChange}
