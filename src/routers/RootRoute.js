@@ -10,10 +10,30 @@ import {
 
 import AppContainer from '../containers/AppContainer'
 import HomeContainer from '../containers/HomeContainer'
-import MovieContainer from '../containers/MovieContainer'
-import MovieDetailContainer from '../containers/MovieDetailContainer'
-import BookContainer from '../containers/BookContainer'
-import MusicContainer from '../containers/MusicContainer'
+
+const MovieContainer = (location, cb) => {
+  require.ensure([], require => {
+    cb(null, require('../containers/MovieContainer').default)
+  }, 'MovieContainer')
+}
+
+const MovieDetailContainer = (location, cb) => {
+  require.ensure([], require => {
+    cb(null, require('../containers/MovieDetailContainer').default)
+  }, 'MovieDetailContainer')
+}
+
+const BookContainer = (location, cb) => {
+  require.ensure([], require => {
+    cb(null, require('../containers/BookContainer').default)
+  }, 'BookContainer')
+}
+
+const MusicContainer = (location, cb) => {
+  require.ensure([], require => {
+    cb(null, require('../containers/MusicContainer').default)
+  }, 'MusicContainer')
+}
 
 const RootRoute = () => {
   return (
@@ -21,10 +41,10 @@ const RootRoute = () => {
       <Route path='/' component={AppContainer} >
         <IndexRoute component={HomeContainer} />
         <Route path='home' component={HomeContainer} />
-        <Route path='movie' component={MovieContainer} />
-        <Route path='music' component={MusicContainer} />
-        <Route path='book' component={BookContainer} />
-        <Route path='movie/:id' component={MovieDetailContainer} />
+        <Route path='movie' getComponent={MovieContainer} />
+        <Route path='music' getComponent={MusicContainer} />
+        <Route path='book' getComponent={BookContainer} />
+        <Route path='movie/:id' getComponent={MovieDetailContainer} />
       </Route>
       <Redirect from='/*' to='/' />
     </Router>
