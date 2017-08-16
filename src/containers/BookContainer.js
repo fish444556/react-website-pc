@@ -3,7 +3,7 @@ import React from 'react'
 class BookContainer extends React.Component {
   render() {
     return (
-      <h2>BookContainer</h2>
+      <h2>Coming soon</h2>
     )
   }
 }

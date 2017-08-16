@@ -29,7 +29,7 @@ export function fetch_movieDetail(params) {
   }
   const REQUEST_PATH = config.SERVER_PATH + `/movie/subject/${params.id}`
   const result = fetchJsonp(REQUEST_PATH, {
-    timeout: 3400
+    timeout: 4400
   })
   return result.then(function (response) {
     // console.log(response.json())
