@@ -7,7 +7,7 @@ export function fetch_movie(params) {
     return false
   }
   let REQUEST_PATH = config.SERVER_PATH + `/movie/${params.type}`
-  console.log(params.type)
+  // console.log(params.type)
   if (params.type !== 'us_box') {
     REQUEST_PATH += `?start=${params.start}&count=${params.count}`
   }
@@ -15,7 +15,7 @@ export function fetch_movie(params) {
     timeout: 3400
   })
   return result.then(function (response) {
-    console.log(response.json())
+    // console.log(response.json())
     return response.json()
   })
   .catch(function (err) {
