@@ -14,7 +14,7 @@ export const comments = Mock.mock({
 export const comments_More = Mock.mock({
   'commentList|5': [{
     'id': '@natural',
-    'time': '@datatime(yy-MM-dd HH:mm:ss)',
+    'time': '@data(2017-MM-dd HH:mm:ss)',
     'name': 'name',
     'content': '@paragraph',
     'url': Random.image('50x50', Random.color(), Random.color(), Random.word(3, 5))
@@ -36,7 +36,7 @@ export const correlations = Mock.mock({
   'correlationList|5-8': [{
     'id': '@natural',
     'name': '@name',
-    'title': '@title(3,6)',
+    'title': '@title(2,4)',
     'url': Random.image('40x40', Random.color(), Random.color(), Random.word(3, 5))
   }]
 })

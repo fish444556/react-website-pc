@@ -23,7 +23,7 @@ const MovieAbout = () => {
         <Col span={6}>
           <img src={item.url} />
         </Col>
-        <Col span={15} offset={3}>
+        <Col span={16} offset={2}>
           <p>{item.title}</p>
           <p>{item.name}</p>
         </Col>
